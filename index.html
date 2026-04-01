@@ -2,6 +2,14 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
+    <!-- VK Bridge -->
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+    <script>
+      if (window.vkBridge) {
+        vkBridge.send("VKWebAppInit", {});
+        console.log("✅ VK Bridge init");
+      }
+    </script>
     <link rel="manifest" href="manifest.webmanifest">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
